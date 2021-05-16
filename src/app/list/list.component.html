@@ -1,0 +1,57 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="table">
+    <div class="addtask">
+        <h2>Añadir tarea:</h2>
+        <input [(ngModel)] = "newTodo" type="text">
+        <button (click) = "add()"  type="submit"> Añadir tarea</button>
+    </div>
+
+    <div class="container">
+        <table class="table table-hover mx-auto">
+            <thead>
+                <tr>
+                  <th scope="col">Tarea
+                    <button mat-icon-button color="$mat-white" (click)="sort('tittle')"> 
+                        <mat-icon>arrow_circle_down</mat-icon> </button>
+                  </th>
+                  <th scope="col">Prioridad
+                    <button mat-icon-button color="$mat-white" (click)="sort('priority')"> 
+                        <mat-icon>arrow_circle_down a</mat-icon> </button>
+                  </th>
+                  <th scope="col">Creación
+                    <button mat-icon-button color="$mat-white" (click)="sort('date')"> 
+                        <mat-icon>arrow_circle_down</mat-icon> </button>
+                  </th>
+                  <th scope="col">Estado
+                    <button mat-icon-button color="$mat-white" (click)="sort('state')"> 
+                        <mat-icon>arrow_circle_down</mat-icon> </button>
+                  </th>
+                  <th></th> <th></th> <th></th> <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of todosArray" [ngSwitch]="todo.state">
+                    <th scope="row">{{todo.tittle}}</th>
+                    <td> {{todo.priority}} </td>
+                    <td> {{todo.now | date:'shortDate'}} </td>
+                    <td *ngSwitchCase="1"> Sin empezar </td>
+                    <td *ngSwitchCase="2"> En proceso </td>
+                    <td *ngSwitchCase="3"> Terminada </td>
+                    <td *ngSwitchCase="1"> <button mat-flat-button color="accent" (click)='state(todo.id!,2)'> 
+                        Empezar </button> </td>
+                    <td *ngSwitchCase="2"> <button mat-flat-button color="accent" (click)='state(todo.id!,1)'> 
+                        Reiniciar </button> </td>
+                    <td *ngSwitchCase="3"><mat-icon>done_all</mat-icon> </td>     
+                    <td> <button mat-icon-button color="primary" (click)='state(todo.id!,3)'> 
+                        <mat-icon>done</mat-icon> </button> </td>
+                    <td> <button mat-icon-button color="primary" (click)='edit(todo)'> 
+                        <mat-icon>settings</mat-icon> </button> </td>
+                    <td> <button mat-icon-button color="warn" (click)='delete(todo.id!)'> 
+                        <mat-icon>delete</mat-icon> </button> </td>
+                </tr> 
+            </tbody>
+        </table>
+
+    </div>  
+</div>

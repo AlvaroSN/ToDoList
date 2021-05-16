@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todolist-c3b27": {
+      "hosting": {
+        "ToDoList": [
+          "todolist-c3b27"
+        ]
+      }
+    }
+  }
+}

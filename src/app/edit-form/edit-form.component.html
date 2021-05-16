@@ -1,0 +1,29 @@
+<h1 class="text-center">Editar tarea</h1>
+<form class="container normal-form" (ngSubmit)="submit()">
+
+    <div class="row">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label> Tarea </mat-label>
+                <input matInput [value]="todoTittle" (keyup)="onKey($event)">
+            </mat-form-field>
+        </div>
+
+        <div class="ml-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Prioridad</mat-label>
+                <mat-select [(value)] = "todoPriority">
+                  <mat-option value=1>1</mat-option>
+                  <mat-option value=2>2</mat-option>
+                  <mat-option value=3>3</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+
+    <div mat-dialog-actions class="row d-flex justify-content-center">
+        <button mat-flat-button color="primary" type="submit">Submit</button>
+        <button mat-flat-button mat-dialog-close color="warn">Cancelar</button>
+    </div>
+      
+</form>

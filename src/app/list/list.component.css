@@ -1,0 +1,28 @@
+
+table {
+    width: 90%;
+}
+
+.addtask {
+    margin-bottom: 5%;
+}
+.table {
+    padding: 0 2% 0% 2%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.list {
+    font-size: large;
+    margin: 5%;
+    padding: 0 5% 0 5%;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    display: inline-flex;
+}
+
+th {
+    background-color: #6200EE;
+    color: white;
+  }
