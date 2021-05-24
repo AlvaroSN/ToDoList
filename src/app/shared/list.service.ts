@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { todo } from '../../Models/todo.model';
+import { todo } from '../Models/todo.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
@@ -16,9 +16,6 @@ export class ListService {
   constructor( private db: AngularFirestore) {
     this.list = db.collection<todo>('todos');
     this.getList();
-    /*this.todos = this.list.snapshotChanges().pipe(
-      map(actions => actions.map(a => a.payload.doc.data() as todo))
-      );*/
   }
 
   ngOnInit(): void { }

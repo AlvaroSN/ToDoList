@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { todo } from '../Models/todo.model';
-import { ListService } from '../list/shared/list.service';
+import { ListService } from '../shared/list.service';
 import { ListComponent } from '../list/list.component';
 
 @Component({

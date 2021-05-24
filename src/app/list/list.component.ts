@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { todo } from '../Models/todo.model';
-import { ListService } from './shared/list.service';
+import { ListService } from '../shared/list.service';
 import {MatDialog} from '@angular/material/dialog';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 

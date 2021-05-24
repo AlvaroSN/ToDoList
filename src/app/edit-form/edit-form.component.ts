@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { todo } from '../Models/todo.model';
-import { ListService } from '../list/shared/list.service';
+import { ListService } from '../shared/list.service';
 import { Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 

@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListService } from './list/shared/list.service'
+import { ListService } from './shared/list.service'
 import { ListComponent } from './list/list.component';
 import { HistoryComponent } from './history/history.component';
 
 import { FormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire';
-/*import {AngularFireDatabaseModule} from '@angular/fire/database';*/
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
